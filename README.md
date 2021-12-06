@@ -41,21 +41,46 @@ git clone https://github.com/shuwang127/PatchGNN-demo
 
 ### 3. Install the dependencies.
 
-Install `pip` tool for `python3`.
+(1) Install `pip` tool for `python3`.
 
 ```shell scripts
 sudo apt install python3-pip
 ```
 
-Install common dependencies.
+(2) Install common dependencies.
 
 ```shell scripts
 pip3 install numpy
 pip3 install pandas
-pip3 install natsort
-pip3 install pandas
-pip3 install sklearn
+pip3 install shutil
 ```
 
+(3) Install CPU-version PyTorch. Official website: https://pytorch.org/.
 
+```shell scripts
+pip3 install torch==1.10.0+cpu torchvision==0.11.1+cpu torchaudio==0.10.0+cpu -f https://download.pytorch.org/whl/cpu/torch_stable.html
+```
 
+(4) Install `clang` tool.
+
+```shell scripts
+pip3 install clang==6.0.0.2
+```
+
+Configurate the clang environment.
+
+```shell scripts
+sudo apt install clang
+cd /usr/lib/x86_64-linux-gnu/
+sudo ln -s libclang-*.so.1 libclang.so
+```
+
+(5) Install Torch-Geometric. Official website: https://pytorch-geometric.readthedocs.io/en/latest/.
+
+```shell scripts
+pip install torch-scatter -f https://data.pyg.org/whl/torch-1.10.0+cpu.html
+pip install torch-sparse -f https://data.pyg.org/whl/torch-1.10.0+cpu.html
+pip install torch-cluster -f https://data.pyg.org/whl/torch-1.10.0+cpu.html
+pip install torch-spline-conv -f https://data.pyg.org/whl/torch-1.10.0+cpu.html
+pip install torch-geometric
+```
