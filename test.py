@@ -116,7 +116,7 @@ def GetDataset(path=None):
 def main():
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     model = PGCN(num_node_features=dim_features)
-    model.load_state_dict(torch.load(mdlsPath + f'/model_{_NETXARCHT_}_{dim_features}.pth'))
+    model.load_state_dict(torch.load(mdlsPath + f'/model_{_NETXARCHT_}_{dim_features}_10.pth'))
     dataset, files = GetDataset(path=testPath)
     dataloader = DataLoader(dataset, batch_size=_BATCHSIZE_, shuffle=False)
     testAcc, testPred, testLabel = PGCNTest(model, dataloader)
