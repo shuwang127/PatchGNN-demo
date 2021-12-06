@@ -84,3 +84,28 @@ pip install torch-cluster -f https://data.pyg.org/whl/torch-1.10.0+cpu.html
 pip install torch-spline-conv -f https://data.pyg.org/whl/torch-1.10.0+cpu.html
 pip install torch-geometric
 ```
+
+### 4. Run the demo program.
+
+```shell scripts
+cd ~/PatchGNN-demo/
+python3 test.py
+```
+
+There are 6 input test samples stored in `~/PatchGNN-demo/testdata/`, the output results are saved in `~/PatchGNN-demo/logs/test_results.txt`.
+
+```shell scripts
+cat logs/test_results.txt
+```
+
+You can find the results.
+
+```shell scripts
+filename,prediction
+./testdata/02cca547\out_slim_ninf_noast_n1_w.log,0
+./testdata/661e4086\out_slim_ninf_noast_n1_w.log,1
+./testdata/9a3ec202\out_slim_ninf_noast_n1_w.log,1
+./testdata/dac90a4b\out_slim_ninf_noast_n1_w.log,1
+./testdata/e3797a66\out_slim_ninf_noast_n1_w.log,0
+./testdata/fc785b12\out_slim_ninf_noast_n1_w.log,0
+```
