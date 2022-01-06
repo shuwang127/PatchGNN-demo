@@ -52,7 +52,6 @@ sudo apt install python3-pip
 ```shell scripts
 pip3 install numpy
 pip3 install pandas
-pip3 install shutil
 ```
 
 (3) Install CPU-version PyTorch. Official website: https://pytorch.org/.
